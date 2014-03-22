@@ -1,0 +1,97 @@
+<% provide(:title, 'New Project') %>
+<div class="index_content loginPage">
+	<div class="loginForm">
+	   <div class="login_area">
+		   <div class="">
+				<h1 class="pageTitle ">Project</h1>
+			</div>
+
+          <%= form_for (@project) do |f| %>
+          <%#= render 'shared/error_users' %>
+
+	      <div class="fieldname">
+      	      <h1><%= f.label :PROJECT %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :PROJECT, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :URL %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :URL, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :DOMAIN %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :DOMAIN, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :TECHNOLOGY %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :TECHNOLOGY, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+	      
+	      <div class="fieldname">
+      	      <h1><%= f.label :TAGS %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :TAGS, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :START_DATE %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :START_DATE, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :END_DATE %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :END_DATE, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :PROJECT_LEAD %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :PROJECT_LEAD, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :PROJECT_TYPE %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :PROJECT_TYPE, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+
+          <div class="fieldname">
+      	      <h1><%= f.label :DESCRIPTION %></h1>
+     		   <div class="login_field"> 
+			       <%= f.text_field :DESCRIPTION, class:"nameField", value:"" %>
+		       </div>
+	      </div>
+          <div class="clear"></div>
+	  
+          <%= f.submit "Create", class: "btn btn-large btn-primary" %>
+	   </div> 
+	    <div class="clear"></div>
+       <% end %>
+  </div>
+</div>

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BdApp::Application.config.secret_key_base = '19a22319e1c894f06d27c3e0458da4e744c3a216eb411da02ae1e0e1b0214d810b20c16cc2d896d362aca63777a712624fc119341b726bf2c0b1882c8d342157'
+BdApp::Application.config.secret_key_base = 'ba707d0b95c3dd2ba5f654a66f88a0eee8c5b2261df8015cd04f9f7ce3840eed45b3f34994f97e8307590e5cead4830f5ce3f8f3cf3b7f3c014c5334f776a977'
