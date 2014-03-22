@@ -52,7 +52,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 # gem 'protected_attributes'
-gem 'pg'
+gem 'sqlite3'
 group :production do
   gem 'rails_12factor'#, '0.0.2'
 end
