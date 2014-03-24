@@ -14,11 +14,18 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 gem 'tinymce-rails'
 
+gem 'protected_attributes'
+gem 'sunspot_rails'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
+ gem 'progress_bar'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -52,7 +59,14 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 # gem 'protected_attributes'
- gem 'sqlite3', '1.3.8'
+group :development, :test do
+  gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
+end
+
+
+
 group :production do
+   gem 'pg'	 
   gem 'rails_12factor'#, '0.0.2'
 end
