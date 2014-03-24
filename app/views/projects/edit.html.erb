@@ -1,0 +1,72 @@
+<h1 class="edit">Editing project information</h1>
+ 
+<%= form_for (@project) do |f| %>
+  <% if @project.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@project.errors.count, "error") %> prohibited
+      this project from being saved:</h2>
+    <ul>
+    <% @project.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p class="edit">
+    <%= f.label :PROJECT %><br>
+    <%= f.text_field :PROJECT %>
+  </p>
+ 
+  <p class="edit">
+    <%= f.label :URL %><br>
+    <%= f.text_area :URL %>
+  </p>
+
+   <p class="edit">
+    <%= f.label :DOMAIN %><br>
+    <%= f.text_area :DOMAIN %>
+  </p>
+   
+    <p class="edit">
+    <%= f.label :TECHNOLOGY %><br>
+    <%= f.text_area :TECHNOLOGY %>
+  </p>
+
+ <p class="edit">
+    <%= f.label :TAGS %><br>
+    <%= f.text_area :TAGS %>
+  </p>
+
+ <p class="edit">
+    <%= f.label :START_DATE %><br>
+    <%= f.text_area :START_DATE %>
+  </p>
+
+ <p class="edit">
+    <%= f.label :END_DATE %><br>
+    <%= f.text_area :END_DATE %>
+  </p>
+
+ <p class="edit">
+    <%= f.label :PROJECT_LEAD %><br>
+    <%= f.text_area :PROJECT_LEAD%>
+ </p>
+
+ <p class="edit">
+    <%= f.label :PROJECT_TYPE %><br>
+    <%= f.text_area :PROJECT_LEAD%>
+ </p>
+
+ <p class="edit">
+    <%= f.label :DESCRIPTION %><br>
+    <%= f.text_area :DESCRIPTION%>
+ </p>
+
+
+
+  <p class="save-button">
+    <%= f.submit "save"%>
+  </p>
+<% end %>
+ 
+<%#= link_to 'Back', project_path %>

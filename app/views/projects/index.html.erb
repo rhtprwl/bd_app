@@ -1,0 +1,58 @@
+<div class="table-responsive">
+	 <%= link_to 'Add Project', new_project_path, :class => 'btn btn-success btn-lg bt'  ,"data-no-turbolink" => true%> &nbsp;&nbsp;&nbsp;
+
+    <div class="row">
+     <div class="center hero-unit">
+       <aside class="span4">
+         <%= form_tag root_path, :method => :get do %>
+           <p>
+           <%= text_field_tag :search, params[:search] %>
+           <%= submit_tag "Search", :name => nil %>
+           </p>
+         <% end %>
+       </aside>
+     </div>
+   </div>
+
+  <table class="table table-bordered table table-hover table table-striped tablewidth">
+ <tr>
+  <td> ID </td>
+  <td> PROJECT </td>
+  <td> URL</td>
+  <td> DOMAIN </td>
+  <td> TECHNOLOGY </td>
+  <td> TAGS </td>
+  <td> START_DATE </td>
+  <td> END_DATE </td> 
+  <td> PROJECT_LEAD</td>
+  <td> PROJECT_TYPE</td>
+  <td> DESCRIPTION </td>
+   <th colspan="2">Action</th>
+
+   
+   <% @project.each do |p| %>
+  <tr>
+  <td><%=p.id%></td>
+  <td><%=p.PROJECT%></td>
+  <td><%=p.URL%></td>
+  <td><%=p.DOMAIN%></td>
+  <td><%=p.TECHNOLOGY%></td>
+  <td><%=p.TAGS%></td>
+  <td><%=p.START_DATE%></td>
+  <td><%=p.END_DATE%></td> 
+  <td><%=p.PROJECT_LEAD%></td>
+  <td><%=p.PROJECT_TYPE%></td>
+  <td><%=p.DESCRIPTION%></td>
+
+  <td >
+     <%= link_to 'Edit', edit_project_path(p), :class => 'btn btn-success btn-lg'  ,"data-no-turbolink" => true%> &nbsp;&nbsp;&nbsp;
+     <%= link_to 'delete', project_path(p), :class => 'btn btn-danger btn-lg',
+                    method: :delete, data: { confirm: 'Are you sure?' } %> 
+       
+        
+        </td>
+ </tr>
+<%end%>
+
+</table>
+</div>
