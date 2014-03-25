@@ -30,19 +30,19 @@
    <th colspan="2">Action</th>
 
    
-   <% @project.each do |p| %>
+   <% @projects.each do |p| %>
   <tr>
   <td><%=p.id%></td>
-  <td><%=p.PROJECT%></td>
-  <td><%=p.URL%></td>
-  <td><%=p.DOMAIN%></td>
-  <td><%=p.TECHNOLOGY%></td>
-  <td><%=p.TAGS%></td>
-  <td><%=p.START_DATE%></td>
-  <td><%=p.END_DATE%></td> 
-  <td><%=p.PROJECT_LEAD%></td>
-  <td><%=p.PROJECT_TYPE%></td>
-  <td><%=p.DESCRIPTION%></td>
+  <td><%=p.projects%></td>
+  <td><%=p.url%></td>
+  <td><%=p.domain%></td>
+  <td><%=p.technology%></td>
+  <td><%=p.tags%></td>
+  <td><%=p.start_date%></td>
+  <td><%=p.end_date%></td> 
+  <td><%=p.project_lead%></td>
+  <td><%=p.project_type%></td>
+  <td><%=p.description%></td>
 
   <td >
      <%= link_to 'Edit', edit_project_path(p), :class => 'btn btn-success btn-lg'  ,"data-no-turbolink" => true%> &nbsp;&nbsp;&nbsp;

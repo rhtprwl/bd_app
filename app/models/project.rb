@@ -1,34 +1,31 @@
 class Project < ActiveRecord::Base
 
-    attr_accessible :PROJECT, :URL, :DOMAIN, :TECHNOLOGY, :TAGS, :START_DATE, :END_DATE, :PROJECT_LEAD, :PROJECT_TYPE, :DESCRIPTION
+   
+    attr_accessible :projects, :url, :domain, :technology, :tags, :start_date, :end_date, :project_lead, :project_type, :description
 
-    validates :PROJECT, presence: true, length: { maximum: 50 }
-	validates :URL, presence: true, length: { maximum: 50 }
-	validates :DOMAIN, presence: true, length: { maximum: 50 }
-	validates :TECHNOLOGY, presence: true, length: { maximum: 50 }
-	validates :TAGS, presence: true, length: { maximum: 50 }
-	validates :START_DATE, presence: true, length: { maximum: 50 }
-	validates :END_DATE, presence: true, length: { maximum: 50 }
-	validates :PROJECT_LEAD, presence: true, length: { maximum: 50 }
-	validates :PROJECT_TYPE, presence: true, length: { maximum: 50 }
-	validates :DESCRIPTION, presence: true, length: { maximum: 50 }
+	validates :projects, presence: true, length: { maximum: 50 }
+	validates :url, presence: true, length: { maximum: 50 }
+	validates :domain, presence: true, length: { maximum: 50 }
+	validates :technology, presence: true, length: { maximum: 50 }
+	validates :tags, presence: true, length: { maximum: 50 }
+	validates :start_date, presence: true, length: { maximum: 50 }
+	validates :end_date, presence: true, length: { maximum: 50 }
+	validates :project_lead, presence: true, length: { maximum: 50 }
+	validates :project_type, presence: true, length: { maximum: 50 }
+	validates :description, presence: true, length: { maximum: 50 }
     
    searchable do
     
-     integer  :ID
-     text   :PROJECT
-     text   :URL
-     text   :DOMAIN
-     text   :TECHNOLOGY
-     text   :TAGS
-     time   :START_DATE
-     time   :END_DATE
-     text   :PROJECT_LEAD
-     text   :PROJECT_TYPE
-     text   :DESCRIPTION
+     integer  :id
+     text   :projects
+     text   :url
+     text   :domain
+     text   :technology
+     text   :tags
+     time   :start_date
+     time   :end_date
+     text   :project_lead
+     text   :project_type
+     text   :description
    end  
-
-   #handle_asynchronously :solr_index
-
 end
-
