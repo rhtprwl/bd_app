@@ -34,6 +34,25 @@ class ProjectsController < ApplicationController
            @projects = Project.all  
        end	
     end  
+    def edit
+      @project = Project.find(params[:id])
+    end
+
+    def update
+      @project = Project.find(params[:id])
+     
+      if @project.update(params[:project].permit(:projects, :url, :domain, :technology, :tags, :start_date, :end_date, :project_lead, :project_type, :description))
+        redirect_to root_path
+      else
+        render 'edit'
+      end
+    end
+    def destroy
+      @project = Project.find(params[:id])
+      @project.destroy
+     
+      redirect_to projects_path
+   end
 
   private
 
